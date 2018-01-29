@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Foody</string>
+    <string name="ss_next">NEXT</string>
+    <string name="ss_skip">SKIP</string>
+    <string name="sc1_top">Mau coba bikin usaha kuliner tanpa resiko besar?</string>
+    <string name="sc1_bot">Kamu bisa mulai disini</string>
+    <string name="sc2_top">Kangen Masakan Rumah?</string>
+    <string name="sc2_bot">Kamu dapat menemukannya di Foody</string>
+    <string name="sc3_top">Request Masakan Kesukaan</string>
+    <string name="sc3_bot">Fitur ini memfasilitasi kamu untuk request masakan</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_maps">Map</string>
+
+</resources>
