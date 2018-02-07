@@ -1,4 +1,4 @@
-package com.example.miafandi.foody.Home.VotingAdapter;
+package com.example.miafandi.foody.Home.CateringAdapter;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -32,14 +32,14 @@ public class GridAdapter extends RecyclerView.Adapter<GridAdapter.ViewHolder> {
         mItems.add(jualan);
 
         jualan = new EndangeredItem();
-        jualan.setName("Rawon Sapi Rendang");
-        jualan.setThumbnail(R.drawable.grid1);
-        jualan.setPrice("15000");
+        jualan.setName("Tumis Kangkung Krispi");
+        jualan.setThumbnail(R.drawable.grid3);
+        jualan.setPrice("8000");
         mItems.add(jualan);
 
         jualan = new EndangeredItem();
-        jualan.setName("Sumur Jengkol Pedas");
-        jualan.setThumbnail(R.drawable.grid2);
+        jualan.setName("Sambal Goreng Kulit");
+        jualan.setThumbnail(R.drawable.grid4);
         jualan.setPrice("10000");
         mItems.add(jualan);
 
@@ -52,6 +52,18 @@ public class GridAdapter extends RecyclerView.Adapter<GridAdapter.ViewHolder> {
         jualan = new EndangeredItem();
         jualan.setName("Sumur Jengkol Pedas");
         jualan.setThumbnail(R.drawable.grid2);
+        jualan.setPrice("10000");
+        mItems.add(jualan);
+
+        jualan = new EndangeredItem();
+        jualan.setName("Tumis Kangkung Krispi");
+        jualan.setThumbnail(R.drawable.grid3);
+        jualan.setPrice("8000");
+        mItems.add(jualan);
+
+        jualan = new EndangeredItem();
+        jualan.setName("Sambal Goreng Kulit");
+        jualan.setThumbnail(R.drawable.grid4);
         jualan.setPrice("10000");
         mItems.add(jualan);
     }

@@ -1,4 +1,4 @@
-package com.loopwiki.coordinatelayoutexamples;
+package com.example.miafandi.foody.Home;
 
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;

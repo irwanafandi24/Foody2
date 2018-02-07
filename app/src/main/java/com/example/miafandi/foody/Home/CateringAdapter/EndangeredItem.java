@@ -1,4 +1,4 @@
-package com.example.miafandi.foody.Home.VotingAdapter;
+package com.example.miafandi.foody.Home.CateringAdapter;
 
 public class EndangeredItem {
     private String nameFood;

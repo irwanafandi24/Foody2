@@ -1,29 +1,21 @@
 package com.example.miafandi.foody.Home;
 
-import android.app.Activity;
 import android.content.Context;
-import android.media.Image;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.AppBarLayout;
 import android.support.design.widget.CollapsingToolbarLayout;
+import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.support.v7.widget.Toolbar;
-import android.view.Menu;
-import android.view.MenuItem;
 
-import com.example.miafandi.foody.Adapter.GridAdapter;
 import com.example.miafandi.foody.R;
-
-import static android.support.v4.app.ActivityCompat.invalidateOptionsMenu;
 
 public class HomeFragment extends Fragment {
     AppBarLayout Appbar;
@@ -37,6 +29,11 @@ public class HomeFragment extends Fragment {
     RecyclerView mRecycleView;
     RecyclerView.LayoutManager mLayoutManager;
     RecyclerView.Adapter mAdapter;
+    ViewPager viewPagerIn;
+    View rootView;
+    //Tab
+    private static final int ACTIVITY_NUM = 0;
+    private Context mContext = getActivity(); //gimana nih
 
     public HomeFragment() {
         // Required empty public constructor
@@ -51,24 +48,20 @@ public class HomeFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        final View rootView = inflater.inflate(R.layout.fragment_home, container, false);
-        // View Pagger
-        viewPager = (ViewPager) rootView.findViewById(R.id.viewPager);
+        rootView = inflater.inflate(R.layout.fragment_home, container, false);
 
-        toolbar = (Toolbar) rootView.findViewById(R.id.toolbarHome);
-        Appbar = (AppBarLayout) rootView.findViewById(R.id.HomeAppbar);
-        CoolToolbar = (CollapsingToolbarLayout) rootView.findViewById(R.id.collapse_toolbar);
-        img = (ImageView) rootView.findViewById(R.id.headImage);
-
+        toolbar = (Toolbar) rootView.findViewById(R.id.MyToolbar);
+        Appbar = (AppBarLayout) rootView.findViewById(R.id.MyAppbar);
+        CoolToolbar = (CollapsingToolbarLayout) rootView.findViewById(R.id.MyCollapseToolbar);
+        img = (ImageView) rootView.findViewById(R.id.imageHeader);
         ((AppCompatActivity)getActivity()).setSupportActionBar(toolbar);
 
         Appbar.addOnOffsetChangedListener(new AppBarLayout.OnOffsetChangedListener() {
             @Override
             public void onOffsetChanged(AppBarLayout appBarLayout, int verticalOffset) {
-                if(Math.abs(verticalOffset) > 200){
+                if(Math.abs(verticalOffset) > 100){
                     ExpandedActionBar = false;
                     CoolToolbar.setTitle("Foody");
-                    //invalidateOptionsMenu(Activity);
                 }else{
                     ExpandedActionBar = true;
                     CoolToolbar.setTitle(" ");
@@ -76,15 +69,17 @@ public class HomeFragment extends Fragment {
             }
         });
 
-        //Grid View
-        mRecycleView = (RecyclerView) rootView.findViewById(R.id.recycleHome);
-        mRecycleView.setHasFixedSize(true);
+        ViewPager mViewPager = (ViewPager) rootView.findViewById(R.id.viewPagerHome);
+        ViewPagerAdapter mViewPagerAdapter = new ViewPagerAdapter(this.getActivity().getSupportFragmentManager());
+        mViewPagerAdapter.addFragment(BerandaFragment.newInstance(),"Beranda");
+        mViewPagerAdapter.addFragment(VotingFragment.newInstance(),"Voting");
+        mViewPagerAdapter.addFragment(CateringFragment.newInstance(),"Catering");
+        mViewPager.setAdapter(mViewPagerAdapter);
 
-        mLayoutManager = new GridLayoutManager(getActivity(),2);
-        mRecycleView.setLayoutManager(mLayoutManager);
+        mViewPager.setCurrentItem(1);
 
-        mAdapter = new GridAdapter();
-        mRecycleView.setAdapter(mAdapter);
+        TabLayout tabLayout = (TabLayout) rootView.findViewById(R.id.tabs);
+        tabLayout.setupWithViewPager(mViewPager);
 
         return rootView;
     }

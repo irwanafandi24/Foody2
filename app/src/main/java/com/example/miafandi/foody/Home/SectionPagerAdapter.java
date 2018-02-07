@@ -1,4 +1,4 @@
-package com.example.miafandi.instagramclone.Home;
+package com.example.miafandi.foody.Home;
 
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -10,6 +10,7 @@ import java.util.List;
 /**
  * Created by MIAfandi on 20/01/2018.
  */
+
 /**
  * Class for adding fragmant tab.
  */
