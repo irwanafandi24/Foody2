@@ -4,10 +4,16 @@ import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
+import android.widget.Toast;
 
 import com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx;
 import com.example.miafandi.foody.Utils.BottomNavigationViewHelper;
@@ -18,6 +24,38 @@ import com.example.miafandi.foody.Profil.ProfileFragment;
 
 public class MainActivity extends AppCompatActivity {
     private static final String TAG = "HomeActivity";
+    RadioButton rb1,rb2,rb3;
+    Button btnSurvey;
+    int checkedRadioButton = 0;
+
+    private RadioGroup.OnCheckedChangeListener checkedChangeListener = new RadioGroup.OnCheckedChangeListener() {
+        @Override
+        public void onCheckedChanged(RadioGroup group, int checkedId) {
+            switch (checkedId){
+                case R.id.rb1:
+                    checkedRadioButton = 1;
+                    break;
+                case R.id.rb2:
+                    checkedRadioButton = 2;
+                    break;
+                case R.id.rb3:
+                    checkedRadioButton = 3;
+                    break;
+            }
+        }
+    };
+    private String getOption(){
+        if(checkedRadioButton == 0){
+            return "Tidak ada option yang dipilih";
+        }else if(checkedRadioButton == 1){
+            return "Option 1 terpilih";
+        }else if(checkedRadioButton == 2){
+            return "Option 2 terpilih";
+        }else if(checkedRadioButton == 3){
+            return "Option 3 terpilih";
+        }else
+            return "Option salah";
+    }
 
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
             = new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -51,6 +89,32 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        //dialog
+        AlertDialog.Builder mBuilder = new AlertDialog.Builder(MainActivity.this);
+        View mView = getLayoutInflater().inflate(R.layout.activity_dialog_survey, null);
+
+        //radioButton
+        rb1 = (RadioButton) mView.findViewById(R.id.rb1);
+        rb2 = (RadioButton) mView.findViewById(R.id.rb2);
+        rb3 = (RadioButton) mView.findViewById(R.id.rb3);
+        btnSurvey = (Button) mView.findViewById(R.id.btnVoting);
+        RadioGroup radioGroup = (RadioGroup) mView.findViewById(R.id.radioGroup);
+
+        mBuilder.setView(mView);
+        final AlertDialog dialog = mBuilder.create();
+        dialog.show();
+
+        radioGroup.setOnCheckedChangeListener(checkedChangeListener);
+        btnSurvey.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(MainActivity.this,"Voting anda: "+getOption(),Toast.LENGTH_SHORT).show();
+                dialog.cancel();
+            }
+        });
+
+
 
         //setup fragment
         FragmentManager fragmentManager = getSupportFragmentManager();
