@@ -203,13 +203,13 @@
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/message"
+                android:src="@drawable/lonceng"
                 />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Pesan"
+                android:text="Notifikasi"
                 android:layout_marginLeft="15dp"
                 android:textColor="@color/colorPrimaryDark"
                 />
@@ -224,13 +224,13 @@
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/message"
+                android:src="@drawable/pelanggan"
                 />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Pesan"
+                android:text="Daftar Pelanggan"
                 android:layout_marginLeft="15dp"
                 android:textColor="@color/colorPrimaryDark"
                 />
@@ -245,13 +245,13 @@
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/message"
+                android:src="@drawable/jempol"
                 />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Pesan"
+                android:text="Feedback"
                 android:layout_marginLeft="15dp"
                 android:textColor="@color/colorPrimaryDark"
                 />
@@ -266,13 +266,13 @@
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/message"
+                android:src="@drawable/bc"
                 />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Pesan"
+                android:text="Promosi"
                 android:layout_marginLeft="15dp"
                 android:textColor="@color/colorPrimaryDark"
                 />
@@ -287,13 +287,13 @@
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/message"
+                android:src="@drawable/setting"
                 />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Pesan"
+                android:text="Pengaturan Akun"
                 android:layout_marginLeft="15dp"
                 android:textColor="@color/colorPrimaryDark"
                 />
