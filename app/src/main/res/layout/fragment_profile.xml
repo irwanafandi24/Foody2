@@ -83,6 +83,7 @@
             />
         
         <TextView
+            android:id="@+id/txtUang"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Rp. 0"
@@ -91,6 +92,7 @@
             />
 
         <Button
+            android:id="@+id/btnDetil"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Detil"
@@ -135,11 +137,12 @@
             />
 
         <Button
+            android:id="@+id/btnUpgrade"
             android:layout_centerHorizontal="true"
             android:layout_width="wrap_content"
             android:layout_height="35dp"
             android:background="@color/commandColor"
-            android:text="@string/common_google_play_services_update_button"
+            android:text="Upgrade"
             android:textColor="@color/white"
             android:layout_alignParentRight="true"
             />
@@ -156,6 +159,7 @@
         >
 
         <Button
+            android:id="@+id/btnJualMasakan"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Jual Masakan"
@@ -164,6 +168,7 @@
             />
 
         <Button
+            android:id="@+id/btnJualCatering"
             android:layout_marginTop="10dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -186,6 +191,7 @@
                 />
 
             <TextView
+                android:id="@+id/txtPesan"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Pesan"
@@ -207,6 +213,7 @@
                 />
 
             <TextView
+                android:id="@+id/txtNotifikasi"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Notifikasi"
@@ -228,6 +235,7 @@
                 />
 
             <TextView
+                android:id="@+id/txtPelanggan"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Daftar Pelanggan"
@@ -249,6 +257,7 @@
                 />
 
             <TextView
+                android:id="@+id/txtFeedback"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Feedback"
@@ -270,6 +279,7 @@
                 />
 
             <TextView
+                android:id="@+id/txtPromosi"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Promosi"
@@ -291,6 +301,7 @@
                 />
 
             <TextView
+                android:id="@+id/txtAkun"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Pengaturan Akun"
@@ -305,6 +316,7 @@
             android:orientation="horizontal"
             >
             <TextView
+                android:id="@+id/txtMenuLain"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Menu Lain"
