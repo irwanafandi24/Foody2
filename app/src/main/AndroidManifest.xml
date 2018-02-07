@@ -50,7 +50,7 @@
         <activity
             android:name=".Map.MapsActivity"
             android:label="@string/title_activity_maps" />
-        <activity android:name=".Profil.MenuLainActivity"></activity>
+        <activity android:name=".Profil.MenuLainActivity" android:theme="@style/AppTheme"></activity>
     </application>
 
 </manifest>
