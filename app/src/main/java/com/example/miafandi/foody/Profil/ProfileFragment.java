@@ -2,8 +2,11 @@ package com.example.miafandi.foody.Profil;
 
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.net.Uri;
 import android.os.Bundle;
+import android.support.annotation.ColorRes;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -18,7 +21,7 @@ import org.w3c.dom.Text;
 
 public class ProfileFragment extends Fragment implements View.OnClickListener{
 
-    private Button btn_detil, btn_upgrade, btn_jualMasakan, btn_jualCatering;
+    private Button btn_detil, btn_upgrade, btn_jualMasakan, btn_jualCatering, btn_reguler;
     private TextView txt_uang, txt_pesan, txt_notifikasi, txt_pelanggan, txt_feedback, txt_promosi, txtakun, txt_menuLain;
 
     public ProfileFragment() {
@@ -35,6 +38,7 @@ public class ProfileFragment extends Fragment implements View.OnClickListener{
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_profile, container, false);
         btn_detil = (Button) rootView.findViewById(R.id.btnDetil);
+        btn_reguler = (Button) rootView.findViewById(R.id.btnReguler);
         btn_upgrade = (Button) rootView.findViewById(R.id.btnUpgrade);
         btn_jualMasakan = (Button) rootView.findViewById(R.id.btnJualMasakan);
         btn_jualCatering = (Button) rootView.findViewById(R.id.btnJualCatering);
@@ -56,6 +60,12 @@ public class ProfileFragment extends Fragment implements View.OnClickListener{
         txt_notifikasi.setOnClickListener(this);
         txt_pesan.setOnClickListener(this);
         txt_uang.setOnClickListener(this);
+
+        if(false){
+            btn_reguler.setText("PREMIUM");
+            btn_jualCatering.setBackgroundColor(btn_jualMasakan.getSolidColor());
+            btn_jualCatering.setTextColor(Color.WHITE);
+        }
 
         return rootView;
     }

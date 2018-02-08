@@ -52,5 +52,6 @@ public class MenuLainActivity extends AppCompatActivity implements View.OnClickL
             i.setClass(this.getApplicationContext(), MainActivity.class);
         }
         startActivity(i);
+        finish();
     }
 }
