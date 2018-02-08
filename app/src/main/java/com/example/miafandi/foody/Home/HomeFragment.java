@@ -63,7 +63,7 @@ public class HomeFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        rootView = inflater.inflate(R.layout.fragment_home, container, false);
+        View rootView = inflater.inflate(R.layout.fragment_home, container, false);
 
         toolbar = (Toolbar) rootView.findViewById(R.id.MyToolbar);
         Appbar = (AppBarLayout) rootView.findViewById(R.id.MyAppbar);

@@ -35,7 +35,7 @@ public class FragmentSlider extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         imageUrls = getArguments().getString(ARG_PARAM1);
-        View view = inflater.inflate(R.layout.fragment_home, container, false);
+        View view = inflater.inflate(R.layout.fragment_slider_item, container, false);
         ImageView img = (ImageView) view.findViewById(R.id.imageHeader);
         Glide.with(getActivity())
                 .load(imageUrls)

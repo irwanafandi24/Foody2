@@ -125,7 +125,7 @@ public class SliderIndicator implements ViewPager.OnPageChangeListener {
                 public void run() {
                     mViewPager.setCurrentItem(moveTo);
                 }
-            }, 2500);
+            }, 10000);
         }catch (Exception e){
         }
     }
