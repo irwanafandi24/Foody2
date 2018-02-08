@@ -60,9 +60,11 @@ public class ProfileFragment extends Fragment implements View.OnClickListener{
         txt_notifikasi.setOnClickListener(this);
         txt_pesan.setOnClickListener(this);
         txt_uang.setOnClickListener(this);
+        btn_jualMasakan.setOnClickListener(this);
 
         if(false){
             btn_reguler.setText("PREMIUM");
+            btn_jualCatering.setOnClickListener(this);
             btn_jualCatering.setBackgroundColor(btn_jualMasakan.getSolidColor());
             btn_jualCatering.setTextColor(Color.WHITE);
         }
