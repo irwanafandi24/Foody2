@@ -48,6 +48,15 @@ public class ProfileFragment extends Fragment implements View.OnClickListener{
         txtakun = (TextView) rootView.findViewById(R.id.txtAkun);
         txt_menuLain = (TextView) rootView.findViewById(R.id.txtMenuLain);
 
+        txt_menuLain.setOnClickListener(this);
+        txtakun.setOnClickListener(this);
+        txt_promosi.setOnClickListener(this);
+        txt_feedback.setOnClickListener(this);
+        txt_pelanggan.setOnClickListener(this);
+        txt_notifikasi.setOnClickListener(this);
+        txt_pesan.setOnClickListener(this);
+        txt_uang.setOnClickListener(this);
+
         return rootView;
     }
 
@@ -76,8 +85,8 @@ public class ProfileFragment extends Fragment implements View.OnClickListener{
         }else if(v==txtakun){
 
         }else{
-            startActivity(i.setClass(this.getContext(),MenuLainActivity.class));
+            i.setClass(this.getContext(),MenuLainActivity.class);
         }
-
+        startActivity(i);
     }
 }
