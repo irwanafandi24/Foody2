@@ -16,13 +16,14 @@ import android.widget.TextView;
 
 import com.example.miafandi.foody.MainActivity;
 import com.example.miafandi.foody.R;
+import com.example.miafandi.foody.TransaksiActivity;
 
 import org.w3c.dom.Text;
 
 public class ProfileFragment extends Fragment implements View.OnClickListener{
 
     private Button btn_detil, btn_upgrade, btn_jualMasakan, btn_jualCatering, btn_reguler;
-    private TextView txt_uang, txt_pesan, txt_notifikasi, txt_pelanggan, txt_feedback, txt_promosi, txtakun, txt_menuLain;
+    private TextView txt_uang, txt_pesan, txt_notifikasi, txt_pelanggan, txt_feedback, txt_promosi, txtakun, txt_menuLain, txt_edit;
 
     public ProfileFragment() {
         // Required empty public constructor
@@ -37,6 +38,7 @@ public class ProfileFragment extends Fragment implements View.OnClickListener{
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_profile, container, false);
+
         btn_detil = (Button) rootView.findViewById(R.id.btnDetil);
         btn_reguler = (Button) rootView.findViewById(R.id.btnReguler);
         btn_upgrade = (Button) rootView.findViewById(R.id.btnUpgrade);
@@ -51,6 +53,7 @@ public class ProfileFragment extends Fragment implements View.OnClickListener{
         txt_promosi = (TextView) rootView.findViewById(R.id.txtPromosi);
         txtakun = (TextView) rootView.findViewById(R.id.txtAkun);
         txt_menuLain = (TextView) rootView.findViewById(R.id.txtMenuLain);
+        txt_edit = (TextView) rootView.findViewById(R.id.txtEditProfile);
 
         txt_menuLain.setOnClickListener(this);
         txtakun.setOnClickListener(this);
@@ -60,7 +63,11 @@ public class ProfileFragment extends Fragment implements View.OnClickListener{
         txt_notifikasi.setOnClickListener(this);
         txt_pesan.setOnClickListener(this);
         txt_uang.setOnClickListener(this);
+        txt_edit.setOnClickListener(this);
+
         btn_jualMasakan.setOnClickListener(this);
+        btn_detil.setOnClickListener(this);
+
 
         if(false){
             btn_reguler.setText("PREMIUM");
@@ -77,7 +84,7 @@ public class ProfileFragment extends Fragment implements View.OnClickListener{
         Intent i = new Intent();
 
         if(v==btn_detil){
-            i.setClass(this.getContext(),MenuLainActivity.class);
+            i.setClass(this.getContext(),TransaksiActivity.class);
         }else if(v==btn_jualCatering){
             i.setClass(this.getContext(),MenuLainActivity.class);
         }else if(v==btn_jualMasakan){
@@ -96,6 +103,8 @@ public class ProfileFragment extends Fragment implements View.OnClickListener{
             i.setClass(this.getContext(),MenuLainActivity.class);
         }else if(v==txtakun){
             i.setClass(this.getContext(),MenuLainActivity.class);
+        }else if(v==txt_edit){
+            i.setClass(this.getContext(),EditProfileActivity.class);
         }else{
             i.setClass(this.getContext(),MenuLainActivity.class);
         }
