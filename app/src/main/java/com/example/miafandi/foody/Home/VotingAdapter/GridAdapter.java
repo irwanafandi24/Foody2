@@ -7,11 +7,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import com.example.miafandi.foody.R;
 import com.example.miafandi.foody.Home.detailFoodItem;
+import com.example.miafandi.foody.R;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -26,40 +25,53 @@ public class GridAdapter extends RecyclerView.Adapter<GridAdapter.ViewHolder> {
 
         mItems = new ArrayList<EndangeredItem>();
         EndangeredItem jualan = new EndangeredItem();
-        jualan.setName("Rawon Sapi Rendang");
-        jualan.setThumbnail(R.drawable.grid1);
+        jualan.setName("Ikan Bumbu Pedas");
+        jualan.setThumbnail(R.drawable.vt1);
+        jualan.setPrice("14000");
+        mItems.add(jualan);
+
+        jualan = new EndangeredItem();
+        jualan.setName("Sate Lilit Manis");
+        jualan.setThumbnail(R.drawable.grid2);
         jualan.setPrice("15000");
         mItems.add(jualan);
 
         jualan = new EndangeredItem();
-        jualan.setName("Sumur Jengkol Pedas");
-        jualan.setThumbnail(R.drawable.grid2);
-        jualan.setPrice("10000");
+        jualan.setName("Sapi Lada Hitam");
+        jualan.setThumbnail(R.drawable.vt3);
+        jualan.setPrice("18000");
         mItems.add(jualan);
 
         jualan = new EndangeredItem();
-        jualan.setName("Rawon Sapi Rendang");
-        jualan.setThumbnail(R.drawable.grid1);
+        jualan.setName("Sate Ayam Madura");
+        jualan.setThumbnail(R.drawable.vt4);
+        jualan.setPrice("16000");
+        mItems.add(jualan);
+
+        jualan = new EndangeredItem();
+        jualan.setName("Ikan Bumbu Pedas");
+        jualan.setThumbnail(R.drawable.vt1);
+        jualan.setPrice("14000");
+        mItems.add(jualan);
+
+        jualan = new EndangeredItem();
+        jualan.setName("Sate Lilit Manis");
+        jualan.setThumbnail(R.drawable.grid2);
         jualan.setPrice("15000");
         mItems.add(jualan);
 
         jualan = new EndangeredItem();
-        jualan.setName("Sumur Jengkol Pedas");
-        jualan.setThumbnail(R.drawable.grid2);
-        jualan.setPrice("10000");
+        jualan.setName("Sapi Lada Hitam");
+        jualan.setThumbnail(R.drawable.vt3);
+        jualan.setPrice("18000");
         mItems.add(jualan);
 
         jualan = new EndangeredItem();
-        jualan.setName("Rawon Sapi Rendang");
-        jualan.setThumbnail(R.drawable.grid1);
-        jualan.setPrice("15000");
+        jualan.setName("Sate Ayam Madura");
+        jualan.setThumbnail(R.drawable.vt4);
+        jualan.setPrice("16000");
         mItems.add(jualan);
 
-        jualan = new EndangeredItem();
-        jualan.setName("Sumur Jengkol Pedas");
-        jualan.setThumbnail(R.drawable.grid2);
-        jualan.setPrice("10000");
-        mItems.add(jualan);
     }
 
 

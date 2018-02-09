@@ -7,8 +7,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 
-import com.example.miafandi.foody.R;
 import com.bumptech.glide.Glide;
+import com.example.miafandi.foody.R;
 
 /**
  * Created by bagicode on 12/04/17.

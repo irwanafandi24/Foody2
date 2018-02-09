@@ -56,7 +56,16 @@
             android:label="@string/title_activity_maps" />
         <activity android:name=".Profil.MenuLainActivity" />
         <activity android:name=".Profil.UpgradeLapakActivity" />
-        <activity android:name=".Home.detailFoodItem" />
+        <activity
+            android:name=".Home.detailFoodItem"
+            android:label="Pesan"
+            android:theme="@style/AppThemeDefault"
+            />
+        <activity
+            android:name=".Home.FoodRating"
+            android:label="Rating Masakan"
+            android:theme="@style/AppThemeDefault"
+            />
         <activity android:name=".Profil.EditProfileActivity" />
         <activity android:name=".TransaksiActivity" />
         <activity android:name=".MulaiJualMasakActivity" />

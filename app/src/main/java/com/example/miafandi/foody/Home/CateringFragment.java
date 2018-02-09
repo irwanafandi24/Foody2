@@ -43,7 +43,7 @@ public class CateringFragment extends Fragment {
         mLayoutManager = new GridLayoutManager(getActivity(),2);
         mRecycleView.setLayoutManager(mLayoutManager);
 
-        mAdapter = new GridAdapter();
+        mAdapter = new GridAdapter(this.getContext());
         mRecycleView.setAdapter(mAdapter);
 
         return rootView;

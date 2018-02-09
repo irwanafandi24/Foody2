@@ -1,7 +1,5 @@
 package com.example.miafandi.foody.Home;
 
-import android.content.Context;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
@@ -45,7 +43,7 @@ public class BerandaFragment extends Fragment {
         mLayoutManager = new GridLayoutManager(getActivity(),2);
         mRecycleView.setLayoutManager(mLayoutManager);
 
-        mAdapter = new GridAdapter();
+        mAdapter = new GridAdapter(this.getContext());
         mRecycleView.setAdapter(mAdapter);
 
         return rootView;

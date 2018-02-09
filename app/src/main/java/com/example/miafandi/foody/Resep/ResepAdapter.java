@@ -66,7 +66,7 @@ public class ResepAdapter extends RecyclerView.Adapter<ResepAdapter.Holderview>{
         notifyDataSetChanged();
     }
 
-    public class Holderview extends RecyclerView.ViewHolder implements View.OnClickListener{
+    public class Holderview extends RecyclerView.ViewHolder{
         TextView v_namaResep;
         TextView v_namaKotaResep;
         TextView v_detailResep;
@@ -81,9 +81,5 @@ public class ResepAdapter extends RecyclerView.Adapter<ResepAdapter.Holderview>{
             v_imageResep=(ImageView) itemview.findViewById(R.id.imageResepItem);
         }
 
-        @Override
-        public void onClick(View v) {
-
-        }
     }
 }

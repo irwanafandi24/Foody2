@@ -1,5 +1,7 @@
 package com.example.miafandi.foody.Home.CateringAdapter;
 
+import android.content.Context;
+import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -7,6 +9,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.miafandi.foody.Home.detailFoodItem;
 import com.example.miafandi.foody.R;
 
 import java.util.ArrayList;
@@ -15,55 +18,58 @@ import java.util.List;
 public class GridAdapter extends RecyclerView.Adapter<GridAdapter.ViewHolder> {
 
     List<EndangeredItem> mItems;
+    Context context;
 
-    public GridAdapter() {
+    public GridAdapter(Context context) {
         super();
+        this.context = context;
+
         mItems = new ArrayList<EndangeredItem>();
         EndangeredItem jualan = new EndangeredItem();
-        jualan.setName("Rawon Sapi Rendang");
-        jualan.setThumbnail(R.drawable.grid1);
-        jualan.setPrice("15000");
+        jualan.setName("Ayam Saus Padang");
+        jualan.setThumbnail(R.drawable.cat1);
+        jualan.setPrice("1000");
         mItems.add(jualan);
 
         jualan = new EndangeredItem();
-        jualan.setName("Sumur Jengkol Pedas");
-        jualan.setThumbnail(R.drawable.grid2);
+        jualan.setName("Nasi Merah Tuna");
+        jualan.setThumbnail(R.drawable.cat2);
         jualan.setPrice("10000");
         mItems.add(jualan);
 
         jualan = new EndangeredItem();
-        jualan.setName("Tumis Kangkung Krispi");
-        jualan.setThumbnail(R.drawable.grid3);
+        jualan.setName("Nasi Pecel Ayam");
+        jualan.setThumbnail(R.drawable.cat3);
         jualan.setPrice("8000");
         mItems.add(jualan);
 
         jualan = new EndangeredItem();
-        jualan.setName("Sambal Goreng Kulit");
-        jualan.setThumbnail(R.drawable.grid4);
+        jualan.setName("Lodeh Tahu Pedas");
+        jualan.setThumbnail(R.drawable.cat4);
         jualan.setPrice("10000");
         mItems.add(jualan);
 
         jualan = new EndangeredItem();
-        jualan.setName("Rawon Sapi Rendang");
-        jualan.setThumbnail(R.drawable.grid1);
+        jualan.setName("Ayam Saus Padang");
+        jualan.setThumbnail(R.drawable.cat1);
         jualan.setPrice("15000");
         mItems.add(jualan);
 
         jualan = new EndangeredItem();
-        jualan.setName("Sumur Jengkol Pedas");
-        jualan.setThumbnail(R.drawable.grid2);
+        jualan.setName("Nasi Merah Tuna");
+        jualan.setThumbnail(R.drawable.cat2);
         jualan.setPrice("10000");
         mItems.add(jualan);
 
         jualan = new EndangeredItem();
-        jualan.setName("Tumis Kangkung Krispi");
-        jualan.setThumbnail(R.drawable.grid3);
+        jualan.setName("Nasi Pecel Ayam");
+        jualan.setThumbnail(R.drawable.cat3);
         jualan.setPrice("8000");
         mItems.add(jualan);
 
         jualan = new EndangeredItem();
-        jualan.setName("Sambal Goreng Kulit");
-        jualan.setThumbnail(R.drawable.grid4);
+        jualan.setName("Lodeh Tahu Pedas");
+        jualan.setThumbnail(R.drawable.cat4);
         jualan.setPrice("10000");
         mItems.add(jualan);
     }
@@ -90,7 +96,7 @@ public class GridAdapter extends RecyclerView.Adapter<GridAdapter.ViewHolder> {
         return mItems.size();
     }
 
-    class ViewHolder extends RecyclerView.ViewHolder  {
+    class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
 
 
         public ImageView imgThumbnail;
@@ -102,6 +108,16 @@ public class GridAdapter extends RecyclerView.Adapter<GridAdapter.ViewHolder> {
             imgThumbnail = (ImageView)itemView.findViewById(R.id.img_thumbnail);
             namaMakanan = (TextView)itemView.findViewById(R.id.foodName);
             bayar = (TextView)itemView.findViewById(R.id.foodPrice);
+
+            itemView.setOnClickListener(this);
+        }
+
+        @Override
+        public void onClick(View v) {
+            int position = getAdapterPosition();
+            EndangeredItem contentTemp = mItems.get(position);
+            Intent intent = new Intent(context, detailFoodItem.class);
+            context.startActivity(intent);
         }
     }
 }

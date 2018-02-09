@@ -1,7 +1,5 @@
 package com.example.miafandi.foody.Adapter;
 
-import android.content.Intent;
-
 public class EndangeredItem {
     private String nameFood;
     private int imgThumbnail;
