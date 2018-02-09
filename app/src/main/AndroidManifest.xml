@@ -47,13 +47,21 @@
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="@string/google_maps_key" />
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
 
         <activity
             android:name=".Map.MapsActivity"
             android:label="@string/title_activity_maps" />
         <activity android:name=".Profil.MenuLainActivity" />
         <activity android:name=".Profil.UpgradeLapakActivity" />
+<<<<<<< HEAD
         <activity android:name=".Home.detailFoodItem"></activity>
+=======
+        <activity android:name=".Profil.EditProfileActivity" />
+        <activity android:name=".TransaksiActivity"></activity>
+>>>>>>> 5023024b2828adda6770e44211847e04ab1851d8
     </application>
 
 </manifest>

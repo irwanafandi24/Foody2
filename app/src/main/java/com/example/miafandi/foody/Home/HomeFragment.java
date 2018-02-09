@@ -111,6 +111,7 @@ public class HomeFragment extends Fragment {
         fragments.add(FragmentSlider.newInstance("http://www.menucool.com/slider/prod/image-slider-2.jpg"));
         fragments.add(FragmentSlider.newInstance("http://www.menucool.com/slider/prod/image-slider-3.jpg"));
         fragments.add(FragmentSlider.newInstance("http://www.menucool.com/slider/prod/image-slider-4.jpg"));
+//        fragments.add(FragmentSlider.newInstance(R.drawable.borderbackground));
 
         mAdapterSlider = new SliderPagerAdapter(getFragmentManager(), fragments);
         sliderView.setAdapter(mAdapterSlider);

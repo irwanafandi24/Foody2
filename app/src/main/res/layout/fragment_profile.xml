@@ -98,7 +98,7 @@
             android:text="Detil"
             android:textStyle="bold"
             android:textColor="@color/commandColor"
-            android:background="@android:color/transparent"
+            android:background="@drawable/borderbackground"
             android:layout_alignParentRight="true"
             android:layout_alignParentTop="true"
             />

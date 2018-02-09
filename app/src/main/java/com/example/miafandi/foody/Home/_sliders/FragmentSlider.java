@@ -27,6 +27,7 @@ public class FragmentSlider extends Fragment {
         FragmentSlider fragment = new FragmentSlider();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, params);
+//        args.putInt(ARG_PARAM1,);
         fragment.setArguments(args);
         return fragment;
     }
