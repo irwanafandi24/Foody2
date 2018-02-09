@@ -1,13 +1,17 @@
 package com.example.miafandi.foody.Home.VotingAdapter;
 
+import android.content.Context;
+import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.example.miafandi.foody.R;
+import com.example.miafandi.foody.Home.detailFoodItem;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -15,9 +19,11 @@ import java.util.List;
 public class GridAdapter extends RecyclerView.Adapter<GridAdapter.ViewHolder> {
 
     List<EndangeredItem> mItems;
-
-    public GridAdapter() {
+    Context context;
+    public GridAdapter( Context context) {
         super();
+        this.context = context;
+
         mItems = new ArrayList<EndangeredItem>();
         EndangeredItem jualan = new EndangeredItem();
         jualan.setName("Rawon Sapi Rendang");
@@ -56,6 +62,7 @@ public class GridAdapter extends RecyclerView.Adapter<GridAdapter.ViewHolder> {
         mItems.add(jualan);
     }
 
+
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup viewGroup, int i) {
         View v = LayoutInflater.from(viewGroup.getContext())
@@ -78,7 +85,7 @@ public class GridAdapter extends RecyclerView.Adapter<GridAdapter.ViewHolder> {
         return mItems.size();
     }
 
-    class ViewHolder extends RecyclerView.ViewHolder  {
+    class ViewHolder extends RecyclerView.ViewHolder  implements View.OnClickListener{
 
 
         public ImageView imgThumbnail;
@@ -90,6 +97,16 @@ public class GridAdapter extends RecyclerView.Adapter<GridAdapter.ViewHolder> {
             imgThumbnail = (ImageView)itemView.findViewById(R.id.img_thumbnail);
             namaMakanan = (TextView)itemView.findViewById(R.id.foodName);
             bayar = (TextView)itemView.findViewById(R.id.foodPrice);
+
+            itemView.setOnClickListener(this);
+        }
+
+        @Override
+        public void onClick(View v) {
+            int position = getAdapterPosition();
+            EndangeredItem contentTemp = mItems.get(position);
+            Intent intent = new Intent(context, detailFoodItem.class);
+            context.startActivity(intent);
         }
     }
 }
