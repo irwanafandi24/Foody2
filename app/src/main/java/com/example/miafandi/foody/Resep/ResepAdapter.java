@@ -1,6 +1,7 @@
 package com.example.miafandi.foody.Resep;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -34,7 +35,7 @@ public class ResepAdapter extends RecyclerView.Adapter<ResepAdapter.Holderview>{
     }
 
     @Override
-    public void onBindViewHolder(Holderview holder, final int position) {
+    public void onBindViewHolder(final Holderview holder, final int position) {
         holder.v_namaResep.setText(productlist.get(position).getNamaResep());
         holder.v_namaKotaResep.setText(productlist.get(position).getKotaResep());
         holder.v_detailResep.setText(productlist.get(position).getDetailResep());
@@ -44,6 +45,12 @@ public class ResepAdapter extends RecyclerView.Adapter<ResepAdapter.Holderview>{
             @Override
             public void onClick(View v) {
                 Toast.makeText(context,"click on"+productlist.get(position).getNamaResep(),Toast.LENGTH_SHORT).show();
+                Intent i = new Intent();
+                i.putExtra("Judul",productlist.get(position).getNamaResep());
+                i.putExtra("detailResep",productlist.get(position).getDetailResep());
+                i.putExtra("image",productlist.get(position).getImageResep());
+                i.setClass(context,DetailResepActivity.class);
+                context.startActivity(i);
             }
         });
     }
@@ -59,7 +66,7 @@ public class ResepAdapter extends RecyclerView.Adapter<ResepAdapter.Holderview>{
         notifyDataSetChanged();
     }
 
-    class Holderview extends RecyclerView.ViewHolder{
+    public class Holderview extends RecyclerView.ViewHolder implements View.OnClickListener{
         TextView v_namaResep;
         TextView v_namaKotaResep;
         TextView v_detailResep;
@@ -67,10 +74,16 @@ public class ResepAdapter extends RecyclerView.Adapter<ResepAdapter.Holderview>{
 
         Holderview(View itemview){
             super(itemview);
+//            itemview.setOnClickListener(this);
             v_namaResep=(TextView) itemview.findViewById(R.id.namaResepItem);
             v_namaKotaResep=(TextView) itemview.findViewById(R.id.kotaResepItem);
             v_detailResep=(TextView) itemview.findViewById(R.id.detailResepItem);
             v_imageResep=(ImageView) itemview.findViewById(R.id.imageResepItem);
+        }
+
+        @Override
+        public void onClick(View v) {
+
         }
     }
 }

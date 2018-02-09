@@ -60,7 +60,8 @@
         <activity android:name=".Profil.EditProfileActivity" />
         <activity android:name=".TransaksiActivity" />
         <activity android:name=".MulaiJualMasakActivity" />
-        <activity android:name=".InputMasakanActivity"></activity>
+        <activity android:name=".InputMasakanActivity" />
+        <activity android:name=".Resep.DetailResepActivity"></activity>
     </application>
 
 </manifest>
