@@ -8,7 +8,7 @@
     tools:context="com.example.miafandi.foody.TransaksiActivity">
 
     <android.support.v7.widget.Toolbar
-        android:id="@+id/toolbarMenuEdit"
+        android:id="@+id/toolbarMenuTransaksi"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/commandColor"
@@ -18,22 +18,14 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         android:padding="12dp"
+        app:navigationIcon="?attr/homeAsUpIndicator"
         app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
-
-        <ImageButton
-            android:id="@+id/btnBackTransaksi"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@android:color/transparent"
-            android:src="@drawable/backicon"
-            />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Transaksi"
             android:textColor="@color/white"
-            android:layout_marginLeft="30dp"
             />
 
     </android.support.v7.widget.Toolbar>

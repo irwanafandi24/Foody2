@@ -3,6 +3,7 @@ package com.example.miafandi.foody.Profil;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.TextView;
@@ -20,19 +21,25 @@ public class MenuLainActivity extends AppCompatActivity implements View.OnClickL
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu_lain);
 
+        Toolbar tb= (Toolbar) findViewById(R.id.toolbarMenuLain);
+        tb.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+            }
+        });
+
         txtAbout = (TextView) findViewById(R.id.txtAbout);
         txtInformasi = (TextView) findViewById(R.id.txtInformasi);
         txtBantuan = (TextView) findViewById(R.id.txtBantuan);
         txtHubungi = (TextView) findViewById(R.id.txtTelphone);
-
-        btnBack = (ImageButton) findViewById(R.id.btnBackMenulain);
 
         txtHubungi.setOnClickListener(this);
         txtBantuan.setOnClickListener(this);
         txtInformasi.setOnClickListener(this);
         txtAbout.setOnClickListener(this);
 
-        btnBack.setOnClickListener(this);
+//        btnBack.setOnClickListener(this);
 
     }
 

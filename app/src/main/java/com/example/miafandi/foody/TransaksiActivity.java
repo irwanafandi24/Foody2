@@ -4,6 +4,8 @@ import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
+import android.view.View;
 
 import com.example.miafandi.foody.Adapter.ViewPagerAdapterTransaksi;
 
@@ -17,6 +19,14 @@ public class TransaksiActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_transaksi);
+
+        Toolbar tb= (Toolbar) findViewById(R.id.toolbarMenuLain);
+        tb.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+            }
+        });
 
         tabLayout = (TabLayout) findViewById(R.id.tabTransaksi);
         tabLayout.addTab(tabLayout.newTab().setText("Masakan Hari Ini"),0,true);

@@ -3,6 +3,7 @@ package com.example.miafandi.foody.Profil;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -28,6 +29,14 @@ public class EditProfileActivity extends AppCompatActivity implements View.OnCli
         txtNama = (EditText) findViewById(R.id.etNamaEdit);
         txttanggal = (EditText) findViewById(R.id.etTglLahir);
         etJenisKelamin = (EditText) findViewById(R.id.etJenisKelamin);
+
+        Toolbar tb= (Toolbar) findViewById(R.id.toolbarMenuEdit);
+        tb.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+            }
+        });
     }
 
     @Override
