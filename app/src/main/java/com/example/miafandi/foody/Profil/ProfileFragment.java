@@ -77,25 +77,25 @@ public class ProfileFragment extends Fragment implements View.OnClickListener{
         Intent i = new Intent();
 
         if(v==btn_detil){
-
+            i.setClass(this.getContext(),MenuLainActivity.class);
         }else if(v==btn_jualCatering){
-
+            i.setClass(this.getContext(),MenuLainActivity.class);
         }else if(v==btn_jualMasakan){
-
+            i.setClass(this.getContext(),MenuLainActivity.class);
         }else if(v==btn_upgrade){
-
+            i.setClass(this.getContext(),MenuLainActivity.class);
         }else if(v==txt_pesan){
-
+            i.setClass(this.getContext(),MenuLainActivity.class);
         }else if(v==txt_notifikasi){
-
+            i.setClass(this.getContext(),MenuLainActivity.class);
         }else if(v==txt_pelanggan){
-
+            i.setClass(this.getContext(),MenuLainActivity.class);
         }else if(v==txt_feedback){
-
+            i.setClass(this.getContext(),MenuLainActivity.class);
         }else if(v==txt_promosi){
-
+            i.setClass(this.getContext(),MenuLainActivity.class);
         }else if(v==txtakun){
-
+            i.setClass(this.getContext(),MenuLainActivity.class);
         }else{
             i.setClass(this.getContext(),MenuLainActivity.class);
         }
