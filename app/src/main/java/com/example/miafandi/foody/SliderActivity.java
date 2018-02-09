@@ -18,6 +18,8 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.example.miafandi.foody.AppConfig.PreferenceIntro;
+
 public class SliderActivity extends AppCompatActivity {
     private ViewPagerAdapter viewPagerAdapter;
     private ViewPager viewPager;
@@ -26,15 +28,18 @@ public class SliderActivity extends AppCompatActivity {
     private  TextView[] dots;
     private LinearLayout dotsLayout;
     Button next,skip;
+    private PreferenceIntro preferenceIntro;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        preferenceIntro = new PreferenceIntro(SliderActivity.this);
 
         introManager = new SliderIntromanagerActivity(this);
         if(!introManager.Check()){
             introManager.setFirst(false);
             Intent intent = new Intent(SliderActivity.this, LoginActivity.class);
+            preferenceIntro.createIntro();
             startActivity(intent);
             finish();
         }
@@ -60,6 +65,7 @@ public class SliderActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(SliderActivity.this, LoginActivity.class);
+                preferenceIntro.createIntro();
                 startActivity(intent);
                 finish();
             }
@@ -74,6 +80,7 @@ public class SliderActivity extends AppCompatActivity {
                     viewPager.setCurrentItem(current);
                 }else{
                     Intent intent = new Intent(SliderActivity.this, LoginActivity.class);
+                    preferenceIntro.createIntro();
                     startActivity(intent);
                     finish();
                 }

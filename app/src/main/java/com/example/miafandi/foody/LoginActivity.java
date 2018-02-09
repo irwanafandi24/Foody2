@@ -10,12 +10,19 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.miafandi.foody.AppConfig.PreferenceIntro;
+
 public class LoginActivity extends AppCompatActivity {
     Button btnLogin, btnDaftar;
+    private PreferenceIntro preferenceIntro;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+        preferenceIntro = new PreferenceIntro(LoginActivity.this);
+        preferenceIntro.checkProceed();
+
         btnLogin = (Button) findViewById(R.id.btnLogin);
         btnDaftar = (Button) findViewById(R.id.btnDaftar);
 
