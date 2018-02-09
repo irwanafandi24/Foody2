@@ -20,7 +20,7 @@ public class TransaksiActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_transaksi);
 
-        Toolbar tb= (Toolbar) findViewById(R.id.toolbarMenuLain);
+        Toolbar tb= (Toolbar) findViewById(R.id.toolbarMenuTransaksi);
         tb.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

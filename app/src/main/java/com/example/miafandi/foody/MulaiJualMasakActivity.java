@@ -22,5 +22,12 @@ public class MulaiJualMasakActivity extends AppCompatActivity {
                 startActivity(new Intent(getApplicationContext(),InputMasakanActivity.class));
             }
         });
+
+        btnMUlaiJualan.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(),InputMasakanActivity.class));
+            }
+        });
     }
 }

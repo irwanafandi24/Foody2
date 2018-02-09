@@ -36,14 +36,27 @@
         android:orientation="vertical"
         android:padding="16dp"
         >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            >
+            <Button
+                android:id="@+id/btnTambahGambar"
+                android:padding="6dp"
+                android:layout_width="75px"
+                android:layout_height="75px"
+                android:background="@drawable/tambah"
+                />
+            <TextView
+                android:id="@+id/txtNamaFoto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:hint="Unggah foto masakan anda"
+                />
 
-        <Button
-            android:id="@+id/btnTambahGambar"
-            android:padding="6dp"
-            android:layout_width="75px"
-            android:layout_height="75px"
-            android:background="@drawable/tambah"
-            />
+        </LinearLayout>
 
         <LinearLayout
             android:layout_marginTop="10dp"
@@ -56,11 +69,13 @@
         </LinearLayout>
 
         <EditText
+            android:id="@+id/etNamaMasakan"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Nama Masakan"
+            android:hint="Nama Masakan"
             android:textColor="@color/grey"
             android:backgroundTint="@color/grey"
+
             />
         <LinearLayout
             android:layout_width="match_parent"
@@ -74,9 +89,11 @@
                 android:textSize="10pt"
                 />
             <EditText
+                android:inputType="numberDecimal"
+                android:id="@+id/et_harga"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Harga Masakan"
+                android:hint="Harga Masakan"
                 android:textColor="@color/grey"
                 />
         </LinearLayout>
@@ -102,7 +119,7 @@
                 android:id="@+id/etKategori"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Atur kategori makanan yang dijual"
+                android:hint="Atur kategori makanan yang dijual"
                 android:textSize="6pt"
                 android:textColor="@color/grey"
                 android:layout_below="@id/txtLokasi"

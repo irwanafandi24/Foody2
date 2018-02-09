@@ -15,6 +15,7 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.example.miafandi.foody.MainActivity;
+import com.example.miafandi.foody.MulaiJualMasakActivity;
 import com.example.miafandi.foody.R;
 import com.example.miafandi.foody.TransaksiActivity;
 
@@ -88,7 +89,7 @@ public class ProfileFragment extends Fragment implements View.OnClickListener{
         }else if(v==btn_jualCatering){
             i.setClass(this.getContext(),MenuLainActivity.class);
         }else if(v==btn_jualMasakan){
-            i.setClass(this.getContext(),MenuLainActivity.class);
+            i.setClass(this.getContext(), MulaiJualMasakActivity.class);
         }else if(v==btn_upgrade){
             i.setClass(this.getContext(),MenuLainActivity.class);
         }else if(v==txt_pesan){
