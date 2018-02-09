@@ -56,7 +56,8 @@
             android:label="@string/title_activity_maps" />
         <activity android:name=".Profil.MenuLainActivity" />
         <activity android:name=".Profil.UpgradeLapakActivity" />
-        <activity android:name=".Profil.EditProfileActivity"></activity>
+        <activity android:name=".Profil.EditProfileActivity" />
+        <activity android:name=".TransaksiActivity"></activity>
     </application>
 
 </manifest>
